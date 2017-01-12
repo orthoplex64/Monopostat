@@ -1,19 +1,15 @@
 package com.cmurr.monopostat;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import com.cmurr.monopostat.spaces.Space;
 
 public class Board {
 	
-	private Set<Space> allSpaces;
-	
-	static {
-		
-	}
+	private ClassMap allSpaces;
 	
 	public Board() {
-		allSpaces = new HashSet<>();
+		allSpaces = new ClassMap();
+		for (Space space : Space.getAllSpaces()) {
+			allSpaces.add(space);
+		}
 	}
 }

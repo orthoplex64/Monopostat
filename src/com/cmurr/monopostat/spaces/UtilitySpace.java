@@ -24,6 +24,7 @@ public class UtilitySpace extends Space {
 	public final int price;
 	
 	private UtilitySpace(String text, int price) {
+		super();
 		this.text = text;
 		this.price = price;
 	}

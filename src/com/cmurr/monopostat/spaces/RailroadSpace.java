@@ -29,6 +29,7 @@ public class RailroadSpace extends Space {
 	public final String text;
 	
 	private RailroadSpace(String text) {
+		super();
 		this.text = text;
 	}
 }

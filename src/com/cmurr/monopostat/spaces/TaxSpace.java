@@ -22,6 +22,7 @@ public class TaxSpace extends Space {
 	public final int amount;
 	
 	private TaxSpace(String text, int amount) {
+		super();
 		this.text = text;
 		this.amount = amount;
 	}

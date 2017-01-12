@@ -27,6 +27,7 @@ public class ChanceSpace extends Space {
 	public final Color color;
 	
 	private ChanceSpace(int rgb) {
+		super();
 		color = new Color(rgb, false);
 	}
 }

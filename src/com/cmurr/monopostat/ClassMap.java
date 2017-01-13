@@ -74,4 +74,8 @@ public class ClassMap {
 		}
 		return Collections.unmodifiableSet((Set<T>) instances.get(clazz));
 	}
+	
+	public String toString() {
+		return instances.toString();
+	}
 }

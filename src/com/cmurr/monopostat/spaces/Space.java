@@ -11,6 +11,7 @@ public abstract class Space {
 	
 	public static PrintStream t = Main.t;
 	
+	protected String displayName;
 	protected Space prev;
 	protected Space next;
 	
@@ -23,7 +24,8 @@ public abstract class Space {
 		t.println("End Space init");
 	}
 	
-	protected Space() {
+	protected Space(String displayName) {
+		this.displayName = displayName;
 		allSpaces.add(this);
 	}
 	

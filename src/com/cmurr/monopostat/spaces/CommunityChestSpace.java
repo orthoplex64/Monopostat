@@ -8,9 +8,9 @@ public class CommunityChestSpace extends Space {
 	
 	public static PrintStream t = Main.t;
 	
-	public static final CommunityChestSpace CHEST_BROWN = new CommunityChestSpace();
-	public static final CommunityChestSpace CHEST_ORANGE = new CommunityChestSpace();
-	public static final CommunityChestSpace CHEST_GREEN = new CommunityChestSpace();
+	public static final CommunityChestSpace CHEST_BROWN = new CommunityChestSpace("Community Chest (first)");
+	public static final CommunityChestSpace CHEST_ORANGE = new CommunityChestSpace("Community Chest (second)");
+	public static final CommunityChestSpace CHEST_GREEN = new CommunityChestSpace("Community Chest (third)");
 	
 	static {
 		t.println("Start CommunityChestSpace init");
@@ -21,5 +21,9 @@ public class CommunityChestSpace extends Space {
 		CHEST_GREEN.setPrev(StreetSpace.NORTH_CAROLINA);
 		CHEST_GREEN.setNext(StreetSpace.PENNSYLVANIA);
 		t.println("End CommunityChestSpace init");
+	}
+	
+	private CommunityChestSpace(String displayName) {
+		super(displayName);
 	}
 }

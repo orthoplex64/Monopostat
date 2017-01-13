@@ -8,12 +8,16 @@ public class GoToJailSpace extends Space {
 	
 	public static PrintStream t = Main.t;
 	
-	public static final GoToJailSpace GO_TO_JAIL = new GoToJailSpace();
+	public static final GoToJailSpace GO_TO_JAIL = new GoToJailSpace("Go to Jail");
 	
 	static {
 		t.println("Start GoToJailSpace init");
 		GO_TO_JAIL.setPrev(StreetSpace.MARVIN);
 		GO_TO_JAIL.setNext(StreetSpace.PACIFIC);
 		t.println("End GoToJailSpace init");
+	}
+	
+	private GoToJailSpace(String displayName) {
+		super(displayName);
 	}
 }

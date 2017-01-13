@@ -8,12 +8,16 @@ public class JailSpace extends Space {
 	
 	public static PrintStream t = Main.t;
 	
-	public static final JailSpace JAIL = new JailSpace();
+	public static final JailSpace JAIL = new JailSpace("Jail");
 	
 	static {
 		t.println("Start JailSpace init");
 		JAIL.setPrev(StreetSpace.CONNECTICUT);
 		JAIL.setNext(StreetSpace.ST_CHARLES);
 		t.println("End JailSpace init");
+	}
+	
+	private JailSpace(String displayName) {
+		super(displayName);
 	}
 }

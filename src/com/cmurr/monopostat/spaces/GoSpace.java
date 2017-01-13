@@ -8,12 +8,16 @@ public class GoSpace extends Space {
 	
 	public static PrintStream t = Main.t;
 	
-	public static final GoSpace GO = new GoSpace();
+	public static final GoSpace GO = new GoSpace("Go");
 	
 	static {
 		t.println("Start GoSpace init");
 		GO.setPrev(StreetSpace.BOARDWALK);
 		GO.setNext(StreetSpace.MEDITERRANEAN);
 		t.println("End GoSpace init");
+	}
+	
+	private GoSpace(String displayName) {
+		super(displayName);
 	}
 }

@@ -9,9 +9,9 @@ public class ChanceSpace extends Space {
 	
 	public static PrintStream t = Main.t;
 	
-	public static final ChanceSpace CHANCE_LIGHT_BLUE = new ChanceSpace(0x000000);
-	public static final ChanceSpace CHANCE_RED = new ChanceSpace(0x000000);
-	public static final ChanceSpace CHANCE_DARK_BLUE = new ChanceSpace(0x000000);
+	public static final ChanceSpace CHANCE_LIGHT_BLUE = new ChanceSpace("Chance (first)", 0x000000);
+	public static final ChanceSpace CHANCE_RED = new ChanceSpace("Chance (second)", 0x000000);
+	public static final ChanceSpace CHANCE_DARK_BLUE = new ChanceSpace("Chance (third)", 0x000000);
 	
 	static {
 		t.println("Start ChanceSpace init");
@@ -26,8 +26,8 @@ public class ChanceSpace extends Space {
 	
 	public final Color color;
 	
-	private ChanceSpace(int rgb) {
-		super();
+	private ChanceSpace(String displayName, int rgb) {
+		super(displayName);
 		color = new Color(rgb, false);
 	}
 }

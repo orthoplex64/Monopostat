@@ -84,7 +84,7 @@ public class StreetSpace extends Space {
 	public final Street street;
 	
 	private StreetSpace(Street street) {
-		super();
+		super(street.name);
 		this.street = street;
 	}
 }
